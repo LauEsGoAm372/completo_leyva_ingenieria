@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Traer foros</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+    <!--sweet alert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js"></script>
+    <!---js y css-->
+    <script type="text/javascript" src="js/foro.js"></script>
+  <style type="text/css">
+  body{
+    padding: 0;
+    margin:0;
+    color: white;
+  }
+  #traertododiv{
+    background: black;
+    text-align: center;
+    padding: 20px;
+    width: 500px;
+    height: 200px;
+    margin: 0 auto;
+  }
+  #aqui{
+      background: black;
+      text-align: center;
+      padding: 20px;
+      width: 500px;
+      margin: 0 auto;
+  }
+  </style>
+</head>
+
+<body>
+  <div id="traertododiv">
+  <h2> Traer todos los elementitos </h2>
+  <button onclick="getAllData()">Traer_todo</button>
+  </div>
+  <div  id="aqui" class="content"> </div>
+  <div id="foro-info">
+      <label for="contenido">Contenido:</label>
+      <textarea id="contenido"></textarea>
+
+      <label for="archivos">Archivos:</label>
+      <input type="text" id="archivos" readonly>
+
+      <label for="nuevo-archivo">Agregar Nuevo Archivo:</label>
+      <input type="file" id="nuevo-archivo">
+
+      <label for="archivos-seleccionados">Archivos Seleccionados:</label>
+      <span id="archivos-seleccionados"></span>
+
+      <button id="subir-archivo-btn" onClick="subirArchivo()">Subir Archivo</button>
+      <button id="guardar-cambios-btn" onClick="guardarCambios()">Guardar Cambios</button>
+  </div>
+
+
+
+</body>
+</html>
